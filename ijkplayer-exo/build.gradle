@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     // http://tools.android.com/tech-docs/new-build-system/tips
@@ -31,10 +32,19 @@ dependencies {
     // compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
 }
 
-gradle.startParameter.taskNames.each { task ->
-    def subProjectName = task;
-    if (task.startsWith(':'))
-        subProjectName = task.split(":")[1]
-    if (subProjectName.equals(project.name))
-        apply from: new File(rootProject.projectDir, "tools/gradle-on-demand.gradle");
+//gradle.startParameter.taskNames.each { task ->
+//    def subProjectName = task;
+//    if (task.startsWith(':'))
+//        subProjectName = task.split(":")[1]
+//    if (subProjectName.equals(project.name))
+//        apply from: new File(rootProject.projectDir, "tools/gradle-on-demand.gradle");
+//}
+
+publish {
+    userOrg =rootProject.ext.userOrg
+    groupId =rootProject.ext.groupId
+    artifactId = 'ijkplayer-exo'
+    publishVersion = rootProject.ext.publishVersion
+    desc = rootProject.ext.desc
+    website = rootProject.ext.website
 }
