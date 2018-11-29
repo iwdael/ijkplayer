@@ -1,5 +1,27 @@
 # ijkplayer
+### 快速引入项目
+```
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
 
+dependencies {
+    # required, enough for most devices.
+    compile 'com.hacknife.ijkplayer:ijkplayer-java:0.8.8'
+    compile 'com.hacknife.ijkplayer:ijkplayer-armv7a:0.8.8'
+
+    # Other ABIs: optional
+    compile 'com.hacknife.ijkplayer:ijkplayer-armv5:0.8.8'
+    compile 'com.hacknife.ijkplayer:ijkplayer-arm64:0.8.8'
+    compile 'com.hacknife.ijkplayer:ijkplayer-x86:0.8.8'
+    compile 'com.hacknife.ijkplayer:ijkplayer-x86_64:0.8.8'
+
+    # ExoPlayer as IMediaPlayer: optional, experimental
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+}
+```
 ### 配置环境
 ```
 # 你的NDK路径
