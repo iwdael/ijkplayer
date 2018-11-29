@@ -1,4 +1,6 @@
 # ijkplayer
+[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/jcenter-0.8.8-brightgreen.svg)](http://jcenter.bintray.com/com/hacknife/ijkplayer) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/api-19+-green.svg)](https://github.com/hacknife)<br/><br/>
+基于android端编译的ijkplayer、支持Https、附带编译教程，可快速引入项目。
 ### 快速引入项目
 ```
 allprojects {
