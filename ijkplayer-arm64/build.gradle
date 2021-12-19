@@ -1,22 +1,15 @@
+apply from: './../config.gradle'
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    // http://tools.android.com/tech-docs/new-build-system/tips
-    //noinspection GroovyAssignabilityCheck
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    //noinspection GroovyAssignabilityCheck
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
+    buildToolsVersion buidConfig.buildToolsVersion
+    compileSdkVersion buidConfig.compileSdkVersion
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion rootProject.ext.targetSdkVersion
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+        minSdkVersion buidConfig.minSdkVersion
+        targetSdkVersion buidConfig.targetSdkVersion
+        versionCode buidConfig.versionCode
+        versionName buidConfig.versionName
     }
     sourceSets.main {
         jniLibs.srcDirs 'src/main/libs'
@@ -26,14 +19,4 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-}
-
-//apply from: new File(rootProject.projectDir, "tools/gradle-on-demand.gradle");
-publish {
-    userOrg =rootProject.ext.userOrg
-    groupId =rootProject.ext.groupId
-    artifactId = 'ijkplayer-arm64'
-    publishVersion = rootProject.ext.publishVersion
-    desc = rootProject.ext.desc
-    website = rootProject.ext.website
 }

@@ -18,8 +18,10 @@
 package tv.danmaku.ijk.media.example.widget.media;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import java.lang.ref.WeakReference;
 
