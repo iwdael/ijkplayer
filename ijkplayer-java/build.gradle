@@ -5,6 +5,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 android {
     buildToolsVersion buidConfig.buildToolsVersion
     compileSdkVersion buidConfig.compileSdkVersion
+    ndkVersion buidConfig.ndkVersion
     defaultConfig {
         minSdkVersion buidConfig.minSdkVersion
         targetSdkVersion buidConfig.targetSdkVersion

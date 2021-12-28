@@ -5,7 +5,8 @@ ext {
             'minSdkVersion'    : 19,
             'versionCode'      : 1,
             'versionName'      : '1.0.0',
-            'buildToolsVersion': '30.0.3'
+            'buildToolsVersion': '30.0.3',
+            'ndkVersion'       : '21.1.6352462'
     ]
     dependent = [
             'appcompat'       : 'androidx.appcompat:appcompat:1.3.1',

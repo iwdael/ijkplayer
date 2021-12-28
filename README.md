@@ -1,5 +1,11 @@
 # ijkplayer
-[![](https://img.shields.io/badge/platform-android-orange.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/language-java-yellow.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/jcenter-0.8.8-brightgreen.svg)](http://jcenter.bintray.com/com/hacknife/ijkplayer) [![](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/hacknife) [![](https://img.shields.io/badge/api-19+-green.svg)](https://github.com/hacknife)<br/><br/>
+![](https://img.shields.io/badge/platform-android-orange.svg)
+![](https://img.shields.io/badge/language-java-yellow.svg)
+![](https://jitpack.io/v/com.iwdael/ijkplayer.svg)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![](https://img.shields.io/badge/license-apache--2.0-green.svg)
+![](https://img.shields.io/badge/api-19+-green.svg)
+
 基于android端编译的ijkplayer、支持Https、附带编译教程，可快速引入项目。
 ### 快速引入项目
 ```
@@ -11,14 +17,14 @@ allprojects {
 
 dependencies {
     # required, enough for most devices.
-    compile 'com.hacknife.ijkplayer:ijkplayer-java:0.8.8'
-    compile 'com.hacknife.ijkplayer:ijkplayer-armv7a:0.8.8'
+    compile 'com.iwdael.ijkplayer:ijkplayer-java:0.8.8'
+    compile 'com.iwdael.ijkplayer:ijkplayer-armv7a:0.8.8'
 
     # Other ABIs: optional
-    compile 'com.hacknife.ijkplayer:ijkplayer-armv5:0.8.8'
-    compile 'com.hacknife.ijkplayer:ijkplayer-arm64:0.8.8'
-    compile 'com.hacknife.ijkplayer:ijkplayer-x86:0.8.8'
-    compile 'com.hacknife.ijkplayer:ijkplayer-x86_64:0.8.8'
+    compile 'com.iwdael.ijkplayer:ijkplayer-armv5:0.8.8'
+    compile 'com.iwdael.ijkplayer:ijkplayer-arm64:0.8.8'
+    compile 'com.iwdael.ijkplayer:ijkplayer-x86:0.8.8'
+    compile 'com.iwdael.ijkplayer:ijkplayer-x86_64:0.8.8'
 
     # ExoPlayer as IMediaPlayer: optional, experimental
     compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
@@ -27,15 +33,15 @@ dependencies {
 ### 配置环境
 ```
 # 你的NDK路径
-NDK=/home/hacknife/Android/Sdk/ndk-bundle
+NDK=/home/iwdael/Android/Sdk/ndk-bundle
 export NDK
 # 你的ADB路径
-ADB=/home/hacknife/Android/Sdk/platform-tools
+ADB=/home/iwdael/Android/Sdk/platform-tools
 export ADB
 # 你的ANDROID_NDK和ANDROID_SDK 路径
-ANDROID_NDK=/home/hacknife/Android/Sdk/ndk-bundle
+ANDROID_NDK=/home/iwdael/Android/Sdk/ndk-bundle
 export ANDROID_NDK
-ANDROID_SDK=/home/hacknife/Android/Sdk
+ANDROID_SDK=/home/iwdael/Android/Sdk
 export ANDROID_SDK 
 # 加入到PATH路径
 PATH=${PATH}:${NDK}:${ADB}:${ANDROID_NDK}:${ANDROID_SDK}
